@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,14 +28,19 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1', 'localhost', 'learning-blocks.azurewebsites.net'
 ]
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
+ALLOWED_HOSTS = ['*']
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 CSRF_TRUSTED_ORIGINS = [
-    'http://127.0.0.1:8000', 'http://localhost:8000', 'http://learning-blocks.azurewebsites.net:80', 'https://www.learning-blocks.azurewebsites.net:80', 'https://learning-blocks.azurewebsites.net:80'
+    'http://127.0.0.1:8000', 'https://learning-blocks.azurewebsites.net'
 ]
-
-# CORS_ORIGIN_WHITELIST = [
-#     'http://127.0.0.1:8000',  'http://localhost:8000', 'http://learning-blocks.azurewebsites.net', 'https://www.learning-blocks.azurewebsites.net', 'https://learning-blocks.azurewebsites.net'
-# ]
+CORS_ORIGIN_WHITELIST = [
+    'http://127.0.0.1:8000', 'https://learning-blocks.azurewebsites.net'
+]
+# Static files (CSS, JavaScript, Images)
+# # https://docs.djangoproject.com/en/4.1/howto/static-files/
+STATIC_URL = 'static/'
 
 # Application definition
 
@@ -118,9 +124,9 @@ USE_I18N = True
 USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.1/howto/static-files/
-
-STATIC_URL = 'static/'
+# # https://docs.djangoproject.com/en/4.1/howto/static-files/
+#
+# STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
