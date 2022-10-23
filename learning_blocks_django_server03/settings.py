@@ -26,12 +26,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost', 'learning-blocks.azurewebsites.net'
-],
+]
+
 CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:8000', 'learning-blocks.azurewebsites.net'
-],
+    'http://localhost:8000', 'https://learning-blocks.azurewebsites.net'
+]
+
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:8000', 'learning-blocks.azurewebsites.net'
+    'http://localhost:8000', 'https://learning-blocks.azurewebsites.net'
 ]
 
 # Application definition
