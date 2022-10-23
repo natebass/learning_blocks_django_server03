@@ -2,13 +2,13 @@ import os
 
 from django.test import TestCase
 
-from .current_grades import Api
 from .current_grades_dan import get_current_grades
 
 
 class Test01(TestCase):
     def setUp(self):
         os.environ["AERIES_API_KEY"] = "477abe9e7d27439681d62f4e0de1f5e1"
+
     #
     # def test_current_grades01(self):
     #     api = Api("815", "ReportCard")
