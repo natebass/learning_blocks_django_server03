@@ -14,6 +14,10 @@ Before running the project, install the python required dependencies. See "Optio
 ```shell
 pip install -r requirements.txt
 ```
+#### Run Django mirgration
+```shell
+python manage.py migrate
+```
 Optionally, run this to be prompted to create an administrator user.
 #### Create admin user
 ```shell
