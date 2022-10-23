@@ -25,15 +25,15 @@ SECRET_KEY = 'django-insecure-c@*8ie4sdpvgauwhszjzub9xd$n25^uf8o6ahet54vi=oug_$s
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost', 'learning-blocks.azurewebsites.net'
+    'localhost', '127.0.0.1', 'learning-blocks.azurewebsites.net'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:8000', 'https://learning-blocks.azurewebsites.net'
+    'http://127.0.0.1:8000', 'http://localhost:8000', 'https://learning-blocks.azurewebsites.net'
 ]
 
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:8000', 'https://learning-blocks.azurewebsites.net'
+    'http://127.0.0.1:8000',  'http://localhost:8000', 'https://learning-blocks.azurewebsites.net'
 ]
 
 # Application definition
