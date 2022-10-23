@@ -28,10 +28,10 @@ ALLOWED_HOSTS = [
     '127.0.0.1', 'localhost', 'learning-blocks.azurewebsites.net'
 ]
 
-# CSRF_TRUSTED_ORIGINS = [
-#     'http://127.0.0.1:8000', 'http://localhost:8000', 'http://learning-blocks.azurewebsites.net', 'https://www.learning-blocks.azurewebsites.net', 'https://learning-blocks.azurewebsites.net'
-# ]
-#
+CSRF_TRUSTED_ORIGINS = [
+    'http://127.0.0.1:8000', 'http://localhost:8000', 'http://learning-blocks.azurewebsites.net:80', 'https://www.learning-blocks.azurewebsites.net:80', 'https://learning-blocks.azurewebsites.net:80'
+]
+
 # CORS_ORIGIN_WHITELIST = [
 #     'http://127.0.0.1:8000',  'http://localhost:8000', 'http://learning-blocks.azurewebsites.net', 'https://www.learning-blocks.azurewebsites.net', 'https://learning-blocks.azurewebsites.net'
 # ]
